@@ -1,6 +1,6 @@
 //<h1>JavaScript Data Types</h1>
 //In this tutorial, you will learn about the various data types available in JavaScript with the help of examples.
-
+//To see the OUTPUT copy this file on JavaScript Compiler
 //<h2>Video: JavaScript Data Types</h2>
 
 //There are different types of data that we can use in a JavaScript program. For example,
