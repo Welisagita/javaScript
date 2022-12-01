@@ -130,7 +130,7 @@ else {
     console.log("Sorry, you failed your exam")
 }
 
-//Script 5 -------------------------------------------------------------------------------------------
+//Script 6 -------------------------------------------------------------------------------------------
 const score5 = -10 //Output: "Score is invalid"
 
 if (score5 > 100){
@@ -146,3 +146,59 @@ else if (score5 >= 50){
 else {
     console.log("Sorry, you failed your exam")
 }
+
+
+
+//Script 7 -------------------------------------------------------------------------------------------
+//We can use logical operator; example
+const score6 = -10 //Output: "Score is invalid"
+
+if (score6 > 100 || score6 < 0){
+    console.log("Score is invalid")
+}
+else if (score6 >= 50){
+    console.log("You have passed the exam")
+    console.log("Congratulations!")
+}
+else {
+    console.log("Sorry, you failed your exam")
+}
+
+//Script 8 ----------------------------------------------------
+// check if the number if positive, negative or zero
+const number = prompt("Enter a number: ");
+
+// check if number is greater than 0
+if (number > 0) {
+    console.log("The number is positive");
+}
+// check if number is 0
+else if (number == 0) {
+  console.log("The number is 0");
+}
+// if number is neither greater than 0, nor zero
+else {
+    console.log("The number is negative");
+}
+
+console.log("The if...else if...else statement is easy");
+
+
+//Nested if...else Statement
+//You can also use an if...else statement inside of an if...else statement. 
+//This is known as nested if...else statement.
+//Script 9 ----------------------------------------------------------------
+const number1 = prompt("Enter a number: ");
+
+if (number1 >= 0) {
+    if (number1 == 0) {
+        console.log("You entered number 0");
+    } else {
+        console.log("You entered a positive number");
+    }
+} else {
+    console.log("You entered a negative number");
+}
+
+
+
