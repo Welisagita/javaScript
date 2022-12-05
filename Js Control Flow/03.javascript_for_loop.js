@@ -55,3 +55,40 @@ Learning JavaScript
 JavaScript is Fun
 5
 */
+
+
+
+//If JavaScript is showing reference error “Prompt is not defined” you should do this: 
+//Solution 1: The most effective solution is we have to install “prompt-sync“. 
+//make sure you have also installed an updated version of npm and node, then write the below code in the terminal: npm install prompt-sync
+//Example: This example will demonstrate the use of prompt on the server side by using the “prompt-sync” package:
+//const prompt=require("prompt-sync")({sigint:true}); >> use this before the prompt
+
+const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
+
+
+// ======================CREATING MULTIPLICATION TABLE=============================================
+
+const number = parseInt(prompt("Enter a number: "))
+
+for (let count=1; count <=10; count++){
+    const product = number * count;
+    console.log(`${number} x ${count} = ${product}`);
+}
+
+/*
+Output: 
+Enter a number: 9
+9 x 1 = 9
+9 x 2 = 18
+9 x 3 = 27
+9 x 4 = 36
+9 x 5 = 45
+9 x 6 = 54
+9 x 7 = 63
+9 x 8 = 72
+9 x 9 = 81
+9 x 10 = 90
+*/
+
+
