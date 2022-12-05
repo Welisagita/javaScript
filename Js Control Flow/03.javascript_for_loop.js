@@ -20,7 +20,7 @@
 //4. The condition is evaluated again. This process continues until the condition is false.
 
 
-//Example
+//Example===================for loop=============================================
 // i = 1; the variable is assign the value 1
 // i <= 5; now this variable is tasted, since this is true (1 is smaller then 5), the body will executed and printed the body and
 // give us the Output:
@@ -110,5 +110,37 @@ grade => 7
 age => 12
 */
 
+//===================for of loop=================
+//Example one
+const students = ["John", "Sarah", "Budi"]
+
+for (let data of students){
+    console.log (data);
+}
+/*
+Output:
+John
+Sarah
+Budi
+*/
+//Example two
+const language = "JavaScript";
+
+for (let character of language){
+    console.log (character);
+}
+/*
+Output:
+J
+a
+v
+a
+S
+c
+r
+i
+p
+t
+*/
 
 
