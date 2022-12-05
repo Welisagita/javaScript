@@ -143,4 +143,17 @@ p
 t
 */
 
+//========================PROGRAMING TASK=========================
+//Can you use the for loop to print all the even numbers from 1 to 100.
+//The answer is
+
+for (let i = 1; i <=100; i++) {
+    if (i % 2 == 0) {
+
+        console.log(i);
+    }
+}
+
+//copy the code above into the javascript compiler to see the Output
+
 
