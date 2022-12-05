@@ -91,4 +91,24 @@ Enter a number: 9
 9 x 10 = 90
 */
 
+//===================for..in loop=================
+
+const student = {
+    name : "Monica",
+    grade : 7,
+    age : 12
+}
+
+for (let data in student) {
+    console.log (`${data} => ${student[data]}`);
+}
+
+/*
+Output:
+name => Monica
+grade => 7
+age => 12
+*/
+
+
 
