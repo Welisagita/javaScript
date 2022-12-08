@@ -56,5 +56,9 @@ let count1 = 1;
 
 while (count1 < 10) {
     const product = number * count1;
+    count1 = count1 + 1;
+
     console.log(product);
+    console.log (`${number} x ${count1} = ${product}`);
 }
+
