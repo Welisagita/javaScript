@@ -38,6 +38,16 @@ while (count < 5) {
     console.log (count);
     count = count + 1;
 }
+/*Output
+Javascript
+1
+Javascript
+2
+Javascript
+3
+Javascript
+4
+*/
 
 //If JavaScript is showing reference error “Prompt is not defined” you should do this: 
 //Solution 1: The most effective solution is we have to install “prompt-sync“. 
@@ -54,11 +64,60 @@ const number = parseInt(prompt("Enter a number:"));
 
 let count1 = 1;
 
-while (count1 < 10) {
+while (count1 <= 10) {
     const product = number * count1;
+    console.log (`${number} * ${count1} = ${product}`)
     count1 = count1 + 1;
-
-    console.log(product);
-    console.log (`${number} x ${count1} = ${product}`);
 }
+/* Output
+Enter a number:9
+9 * 1 = 9
+9 * 2 = 18
+9 * 3 = 27
+9 * 4 = 36
+9 * 5 = 45
+9 * 6 = 54
+9 * 7 = 63
+9 * 8 = 72
+9 * 9 = 81
+9 * 10 = 90
+*/
 
+// ======================do while loop=============================================
+/* syntax
+do {
+    // body of loop
+} while(condition)
+*/
+
+let count2 = 1;
+
+do {
+    console.log(count2);
+    count2 = count2 + 1;
+} while(count2 <=5 )
+
+/*Output
+1
+2
+3
+4
+5
+*/
+
+// ====================== PROGRAMING TASK =============================================
+/* Can you use the while loop to print
+multiplication table for the given number.
+But this time, you have to print the number
+from 10 to 1.
+*/
+
+const number3 = parseInt(prompt("Enter a number: "));
+
+let count3 = 10;
+
+while (count3 >= 1){
+    const product3 = number3 * count3;
+    console.log (`${number3} * ${count3} = ${product3}`);
+    count3 = count3 - 1;
+}
