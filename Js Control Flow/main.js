@@ -6,29 +6,29 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
+//Take the operator input
+const operator = prompt("Enter operator ( either +, -, * or / ): ");
 
+//Take the operand input
+const number1 = parseFloat(prompt("Enter first number: "));
+const number2 = parseFloat(prompt("Enter second number: "));
 
-while (true){
-    let number2 = parseInt(prompt("Enter a number: "));
-
-    if (number2 > 100){
+let result;
+switch(operator){
+    case '+':
+        result = number1 + number2;
         break;
-    }
-    
-    let isPrime = true;
-    for (let i = 2; i < number2; i++){
-        if (number2 % i == 0) {
-            isPrime = false;
-            break;
-        }
-    }
-
-    if (number2 < 0 || !isPrime) {
-        console.log ("Input another number");
-        continue;
-    }
-    
-    else if (isPrime) {
-        console.log(number2);
-    }
+    case '-':
+        result = number1 + number2;
+        break;
+    case '*':
+        result = number1 + number2;
+        break;
+    case '/':
+        result = number1 + number2;
+        break;
+    default:
+        console.log("Invalid operator");
 }
+
+console.log(`${number1} ${operator} ${number2} = ${result}`);
