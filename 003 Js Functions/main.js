@@ -10,7 +10,9 @@ let a = 88;
 function checkValue(){
     let a = 77;
     a = a - 57;
+   console.log(a);
 }
+
+
 checkValue();
-console.log(a);
 

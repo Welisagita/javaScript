@@ -115,5 +115,5 @@ function checkValue(){
     let a = 77;
     a = a - 57;
 }
-checkValue();
-console.log(a);
+checkValue();   //will not print; because There's no print statement (console.log) inside the fuction
+console.log(a);  // will print a; GlOBAL SCOPE
