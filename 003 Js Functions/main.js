@@ -6,15 +6,11 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
-// program to find the square of a number
-// function is declared inside the variable
-
-let x = function (num) { 
-    return num * num 
-};
-console.log(x(4));
-
-// can be used as variable value for other variables
-let y = x(3);
-console.log(y);
+let a = 88;
+function checkValue(){
+    let a = 77;
+    a = a - 57;
+}
+checkValue();
+console.log(a);
 
