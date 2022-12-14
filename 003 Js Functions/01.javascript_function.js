@@ -86,15 +86,20 @@ add(2,9);
 
 //===================sum of two Numbers, Functiou return============
 
+// program to add two numbers
+// declaring a function
 function add(a,b){
     return a + b;
 }
 
+// take input from the user
 let number1 = parseInt(prompt("Enter first number: "));
 let number2 = parseInt(prompt("Enter second number: "));
 
+// calling function
 let result = add(number1, number2);
 
+//display the result
 console.log("The sum is " + result);
 
 /*Output:
@@ -102,4 +107,28 @@ Enter first number: 3
 Enter second number: 5
 The sum is 8
  */
+
+
+//=============================Benefits of Using a Function
+/*
+> Function makes the code reusable. You can declare it once and use it multiple times.
+> Function makes the program easier as each small task is divided into a function.
+> Function increases readability.
+*/
+
+
+// program to find the square of a number
+// function is declared inside the variable
+
+let x = function (num) { 
+    return num * num 
+};
+console.log(x(4));
+
+// can be used as variable value for other variables
+let y = x(3);
+console.log(y);
+
+
+//Note: In ES2015, JavaScript expressions are written as arrow functions.
 
