@@ -82,3 +82,24 @@ add(2,9);
 7
 11
  */
+
+
+//===================sum of two Numbers, Functiou return============
+
+function add(a,b){
+    return a + b;
+}
+
+let number1 = parseInt(prompt("Enter first number: "));
+let number2 = parseInt(prompt("Enter second number: "));
+
+let result = add(number1, number2);
+
+console.log("The sum is " + result);
+
+/*Output:
+Enter first number: 3
+Enter second number: 5
+The sum is 8
+ */
+

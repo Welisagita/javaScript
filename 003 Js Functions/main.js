@@ -6,11 +6,15 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
-function add (a, b){
-    console.log(a + b);
+function add(a,b){
+    return a + b;
 }
-add(3, 9);
-add( 5, 1);
 
+let number1 = parseInt(prompt("Enter first number: "));
+let number2 = parseInt(prompt("Enter second number: "));
+
+let result = add(number1, number2);
+
+console.log("The sum is " + result);
 
 
