@@ -6,17 +6,30 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
+//Object student name, rollNo, totalMarks
+const student1 = {
+    name: "Anthon",
+    rollNo: 2467,
+    totalMark: 70,
+}
 
-function factorial(x){
-    if(x === 0){
-        return 1;
-    }
-    else{
-        return x * factorial(x-1);
-    }
+//Function to print student information
+function studentInfo() {
+    console.log(student1.name);
+    console.log(student1.rollNo);
+    console.log(student1.totalMark);
 }
-const num = 4;
-if(num > 0){
-    let result = factorial(num);
-    console.log(`The factorial of ${num} is ${result}`);
+
+//function to check if student Pass or not
+function score(){
+if (student1.totalMark >= 40){
+    console.log("You Passed");
 }
+else {
+    console.log("You failed");
+}
+}
+
+
+studentInfo(); // Output: Anthon 2467 70
+score(); //Output: You Passed
