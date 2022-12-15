@@ -6,13 +6,8 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
-let a = 88;
-function checkValue(){
-    let a = 77;
-    a = a - 57;
-   console.log(a);
+greet();
+
+let greet = function (){
+    console.log("Hi There!");
 }
-
-
-checkValue();
-
