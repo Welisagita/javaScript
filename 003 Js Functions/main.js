@@ -6,8 +6,17 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
-greet();
 
-let greet = function (){
-    console.log("Hi There!");
+function factorial(x){
+    if(x === 0){
+        return 1;
+    }
+    else{
+        return x * factorial(x-1);
+    }
+}
+const num = 4;
+if(num > 0){
+    let result = factorial(num);
+    console.log(`The factorial of ${num} is ${result}`);
 }
