@@ -5,13 +5,24 @@
 //const prompt=require("prompt-sync")({sigint:true}); >> use this before the prompt
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
+ 
 
-const person2 = {
-    name: 'John',
-    age: 22,
-    greet: function(){
-        let surname = 'Doe';
-        console.log ('The name is'+' '+this.name+' '+surname);
-    }
+function Person(){
+    this.name = 'Luigi',
+    this.age = 27
 }
-person2.greet();
+
+let person9 = new Person();
+let person10 = new Person();
+
+//adding property to person 10 object
+person10.gender = 'male';
+
+//adding method to person 10 object
+person10.greet = function(){
+    console.log('Hi'+' '+ this.name);
+}
+
+console.log(person10.name, person10.gender);
+person10.greet();
+person9.greet();
