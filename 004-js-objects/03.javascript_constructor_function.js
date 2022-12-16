@@ -151,6 +151,53 @@ You cannot access gender or greet() from person9.
 
 Hence the program gives error when we try to access person9.greet(); */
 
+//=============== Prototype ========================
+
+function Person (){
+    this.name = 'Ustman',
+    this.age = 43
+}
+//creating objects
+let person11 = new Person();
+let person12 = new Person();
+//creating new property to constrator function
+Person.prototype.gender = 'male';
+
+console.log(person11.gender); //Output: male
+console.log(person12.gender); //Output: male
+
+//=================== JavaScript Built-in Constructors =============================
+
+/*JavaScript also has built-in constructors. 
+Some of them are: */
+
+let a = new Object();
+let b = new String();
+let c = new Number();
+let d = new Boolean();
+
+//In JavaScript, strings can be created as objects by:
+const name = new String('John');
+console.log(name); //Output: John
+
+//In JavaScript, numbers can be created as objects by:
+const number = new Number(67);
+console.log(number); //Output: 67
+
+//In JavaScript, booleans can be created as objects by:
+const count = new Boolean(true);
+console.log(count); //Output: true
+
+
+/*Note: It is recommended to use primitive data types and create them in a normal way, 
+such as const name = 'John';, const number = 67; and const count = true;
+
+You should not declare strings, numbers, and boolean values as objects 
+because they slow down the program. */
+
+/*Note: In JavaScript, the keyword class was introduced in ES6 (ES2015) 
+that also allows us to create objects. 
+Classes are similar to constructor functions in JavaScript. */
 
 
 

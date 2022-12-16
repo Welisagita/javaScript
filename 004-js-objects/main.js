@@ -7,22 +7,15 @@ const prompt=require("prompt-sync")({sigint:true});//This line i use because sho
 
  
 
-function Person(){
-    this.name = 'Luigi',
-    this.age = 27
+function Person (){
+    this.name = 'Ustman',
+    this.age = 43
 }
 
-let person9 = new Person();
-let person10 = new Person();
+let person11 = new Person();
+let person12 = new Person();
 
-//adding property to person 10 object
-person10.gender = 'male';
+Person.prototype.gender = 'male';
 
-//adding method to person 10 object
-person10.greet = function(){
-    console.log('Hi'+' '+ this.name);
-}
-
-console.log(person10.name, person10.gender);
-person10.greet();
-person9.greet();
+console.log(person11.gender);
+console.log(person12.gender);
