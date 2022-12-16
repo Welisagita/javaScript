@@ -6,30 +6,12 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
 
-//Object student name, rollNo, totalMarks
-const student1 = {
-    name: "Anthon",
-    rollNo: 2467,
-    totalMark: 70,
+const person2 = {
+    name: 'John',
+    age: 22,
+    greet: function(){
+        let surname = 'Doe';
+        console.log ('The name is'+' '+this.name+' '+surname);
+    }
 }
-
-//Function to print student information
-function studentInfo() {
-    console.log(student1.name);
-    console.log(student1.rollNo);
-    console.log(student1.totalMark);
-}
-
-//function to check if student Pass or not
-function score(){
-if (student1.totalMark >= 40){
-    console.log("You Passed");
-}
-else {
-    console.log("You failed");
-}
-}
-
-
-studentInfo(); // Output: Anthon 2467 70
-score(); //Output: You Passed
+person2.greet();
