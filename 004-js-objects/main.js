@@ -7,15 +7,26 @@ const prompt=require("prompt-sync")({sigint:true});//This line i use because sho
 
  
 
-function Person (){
-    this.name = 'Ustman',
-    this.age = 43
+const student3 = {
+    firstName: 'Sara'
 }
 
-let person11 = new Person();
-let person12 = new Person();
+//getting property
+Object.defineProperty(student3, "getName", {
+    get: function(){
+        return this.firstName;
+    }
+});
 
-Person.prototype.gender = 'male';
+//setting property
+Object.defineProperty(student3, "changeName",{
+    set: function(value){
+        this.firstName = value;
+    }
+});
 
-console.log(person11.gender);
-console.log(person12.gender);
+console.log(student3.firstName); //Output: Sara
+
+//changing a property value
+student3.changeName = 'Amy';
+console.log(student3.firstName); //Output: Amy
