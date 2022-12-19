@@ -6,8 +6,10 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
  
-//
-let dailyActivities1 = ['eat','sleep'];
+let arr2 = ['h','e'];
+arr2.name = 'john';
 
-dailyActivities1.unshift('work');
-console.log(dailyActivities1);
+console.log(arr2);
+console.log(arr2.name);
+console.log(arr2['name']);
+
