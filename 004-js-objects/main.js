@@ -6,27 +6,12 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
  
-
-const student3 = {
-    firstName: 'Sara'
+//
+function Person(){
+    this.name = 'Abu'
 }
 
-//getting property
-Object.defineProperty(student3, "getName", {
-    get: function(){
-        return this.firstName;
-    }
-});
+Person.prototype.age = 24;
+const person11 = new Person();
 
-//setting property
-Object.defineProperty(student3, "changeName",{
-    set: function(value){
-        this.firstName = value;
-    }
-});
-
-console.log(student3.firstName); //Output: Sara
-
-//changing a property value
-student3.changeName = 'Amy';
-console.log(student3.firstName); //Output: Amy
+console.log(person11.__proto__);
