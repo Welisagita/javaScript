@@ -7,11 +7,7 @@ const prompt=require("prompt-sync")({sigint:true});//This line i use because sho
 
  
 //
-function Person(){
-    this.name = 'Abu'
-}
+let dailyActivities1 = ['eat','sleep'];
 
-Person.prototype.age = 24;
-const person11 = new Person();
-
-console.log(person11.__proto__);
+dailyActivities1.unshift('work');
+console.log(dailyActivities1);
