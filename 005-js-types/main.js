@@ -6,19 +6,7 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
  
-let studentData11 = [['Dony', 21], ['Ama', 20]];
-
-for (let i = 0; i < studentData11.length; i++){
-    let innerArrayLength = studentData11[i].length;
-
-    for(let j = 0; j < innerArrayLength; j++){
-        console.log(studentData11[i][j]);
-    }
-}
-
-
-
-
-
+const name6 = `My name is\ 'peter\'. `;
+console.log(name6);
 
 
