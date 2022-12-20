@@ -6,7 +6,15 @@
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
  
-const arr = ['hello', 1, 'javascript']
-for(let x in arr){
-    console.log(arr[x]);
-}
+const j = '23';//string
+const k = true;//boolean
+
+////converting to number
+const result1 = Number(j);
+const result2 = Number(k);
+
+console.log(result1);//Output: 23
+console.log(result2);//Output: 1
+
+
+
