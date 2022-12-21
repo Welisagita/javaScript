@@ -5,13 +5,23 @@
 //const prompt=require("prompt-sync")({sigint:true}); >> use this before the prompt
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
-const nomerator = 100, denominator = 'a';
+const number2 = 1;
 
 try{
-    console.log(nomerator/denominator);
-    console.log(a);
+    throw new Error('This is the throw');
 }
 catch(error){
     console.log('An error caught');
-    console.log('Error message: '+ error);
+    if(number2 + 8 > 10){
+        console.log('Error message: ' + error); 
+        console.log('Error resolved');
+    }
+    else{
+        throw new Error('The value is low');
+    }
 }
+/*Output:
+An error caught
+Error message: Error: This is the throw
+Error resolved
+ */
