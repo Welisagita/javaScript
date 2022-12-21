@@ -5,16 +5,13 @@
 //const prompt=require("prompt-sync")({sigint:true}); >> use this before the prompt
 const prompt=require("prompt-sync")({sigint:true});//This line i use because showing "ReferenceError: prompt is not defined"
 
-const x = Symbol('hey');
+const nomerator = 100, denominator = 'a';
 
-// description property
-console.log(x.description); // hey
-
-const stringArray = ['a', 'b', 'c'];
-const numberArray = [1, 2, 3];
-
-// isConcatSpreadable property
-numberArray[Symbol.isConcatSpreadable] = false;
-
-let result = stringArray.concat(numberArray);
-console.log(result); // ["a", "b", "c", [1, 2, 3]]
+try{
+    console.log(nomerator/denominator);
+    console.log(a);
+}
+catch(error){
+    console.log('An error caught');
+    console.log('Error message: '+ error);
+}
