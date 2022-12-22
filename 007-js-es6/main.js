@@ -1,4 +1,5 @@
-let e = (...n) =>{
-  console.log(n);
+function test(x=1){
+  console.log(x);
 }
-e(4,5,6);
+
+test(undefined);//Output: 1
