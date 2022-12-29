@@ -180,7 +180,7 @@ console.log(x6);//One
 console.log(y6);//two
 console.log(z6);//three
 
-/*Here, the variable y and z are assigned nested elements two and three.
+/*Here, the variable y6 and z6 are assigned nested elements two and three.
 
 In order to execute the nested destructuring assignment, 
 you have to enclose the variables in an array structure (by enclosing inside []).
@@ -201,3 +201,11 @@ const {name7, hobbies7: {read7, playGame7}} = person7;
 console.log(name7); // Jack
 console.log(read7); // true
 console.log(playGame7); // true
+
+/*In order to execute the nested destructuring assignment for objects, 
+you have to enclose the variables in an object structure (by enclosing inside {}).
+
+Note: Destructuring assignment feature was introduced in ES6. 
+Some browsers may not support the use of the destructuring assignment. 
+Visit Javascript Destructuring support to learn more. */
+
