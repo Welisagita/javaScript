@@ -1,19 +1,27 @@
 class Person {
-  constructor (name){
+  constructor(name){
       this.name = name;
+      this.occupation = 'unemployed';
   }
-
-  get personName (){
-      return this.name;
-  }
-
-  set personName(x){
-      this.name = x;
+  greet(){
+      console.log(`Hello ${this.name}`)
   }
 }
 
-let person5 = new Person('Charlie');
-console.log(person5.name);//Output: Charlie
+class Student extends Person {
+  constructor(name){
+      super(name);
+      this.occupation = 'Student';
+  }
+  greet(){
+      console.log(`Hello student ${this.name}`);
+      console.log(`occupation: ` + this.occupation);
+  }
+}
 
-person5.personName = 'Sara';
-console.log(person5.name);//Output: Sara
+let student3 = new Student('Dony');
+student3.greet();
+
+/*Output:
+Hello student Dony
+occupation: Student */
