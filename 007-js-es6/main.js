@@ -1,27 +1,11 @@
-class Person {
-  constructor(name){
-      this.name = name;
-      this.occupation = 'unemployed';
-  }
-  greet(){
-      console.log(`Hello ${this.name}`)
-  }
+function* generatorFunc(){
+  yield 10;
+  yield 20;
+  yield 30;
 }
 
-class Student extends Person {
-  constructor(name){
-      super(name);
-      this.occupation = 'Student';
-  }
-  greet(){
-      console.log(`Hello student ${this.name}`);
-      console.log(`occupation: ` + this.occupation);
-  }
+const obj = generatorFunc();
+
+for(let value of obj){
+  console.log(value);
 }
-
-let student3 = new Student('Dony');
-student3.greet();
-
-/*Output:
-Hello student Dony
-occupation: Student */
