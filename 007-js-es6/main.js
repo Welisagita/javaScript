@@ -1,13 +1,19 @@
-function subset(setG, setH){
-  for(let i of setH){
-      if (!setG.has(i)){
-          return false;
+const myFunction = () =>{
+  console.log('execute this function');
+}
+
+const handler6 = {
+  set: function(target, prop, value){
+      if(prop === 'name' && value === 'Jack'){
+          myFunction();
+      }
+      else {
+          console.log('Can only access name property');
       }
   }
-  return true;
 }
-let setG = new Set(['apple', 'mango', 'orange']);
-let setH = new Set(['orange', 'apple']);
 
-let result3 = subset(setG, setH);
-console.log(result3);//Output: true
+const proxy6 = new Proxy({}, handler6);
+
+proxy6.name = 'Jack';
+proxy6.age = 21;
