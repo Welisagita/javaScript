@@ -1,11 +1,19 @@
-function* generatorFunc(){
-  yield 10;
-  yield 20;
-  yield 30;
+const myFunction = () =>{
+  console.log('execute this function');
 }
 
-const obj = generatorFunc();
-
-for(let value of obj){
-  console.log(value);
+const handler6 = {
+  set: function(target, prop, value){
+      if(prop === 'name' && value === 'Jack'){
+          myFunction();
+      }
+      else {
+          console.log('Can only access name property');
+      }
+  }
 }
+
+const proxy6 = new Proxy({}, handler6);
+
+proxy6.name = 'Jack';
+proxy6.age = 21;
