@@ -1,13 +1,15 @@
-function subset(setG, setH){
-  for(let i of setH){
-      if (!setG.has(i)){
-          return false;
-      }
+const person7 = {
+  name7: 'Jack',
+  age7: 26,
+  hobbies7: {
+      read7: true,
+      playGame7: true
   }
-  return true;
 }
-let setG = new Set(['apple', 'mango', 'orange']);
-let setH = new Set(['orange', 'apple']);
+// nested destructuring 
+const {name7, hobbies7: {read7, playGame7}} = person7;
 
-let result3 = subset(setG, setH);
-console.log(result3);//Output: true
+console.log(name7); // Jack
+console.log(read7); // true
+console.log(playGame7); // true
+
