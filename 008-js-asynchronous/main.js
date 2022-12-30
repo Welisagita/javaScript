@@ -1,13 +1,9 @@
-function greet(name, myFunction){
-  console.log('Hello world');
-  myFunction(name);
-}
+let countValue3 = new Promise(function(resolve, reject){
+  resolve('Promise Resolved');
+})
 
-function sayName(name){
-  console.log('Hi' + ' ' + name);
-}
-
-setTimeout(greet, 2000, 'Goku', sayName);
-/*Output:
-Hello world
-Hi Goku */
+countValue3.finally(
+  function greet(){
+      console.log ('This code is executed.')
+  }
+);
