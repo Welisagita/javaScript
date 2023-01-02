@@ -1,6 +1,7 @@
-//JavaScript object
-const jsData = {"name":"Donny", "age":21}
-//converting to JSON
-const obj1 = JSON.stringify(jsData);
+const currentDate = new Date();
+const date10 = currentDate.getDate();
+const month10 = currentDate.getMonth();
+const year10 = currentDate.getFullYear();
 
-console.log(obj1);
+let monthDateYear = (month10+1) + '/' + date10 + '/' + year10;
+console.log(monthDateYear);
