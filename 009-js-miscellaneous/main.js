@@ -1,5 +1,6 @@
-function greet(name, lastName){
-  console.log('Hallo' + ' ' + name + ' ' + lastName);
-}
+//JavaScript object
+const jsData = {"name":"Donny", "age":21}
+//converting to JSON
+const obj1 = JSON.stringify(jsData);
 
-setInterval(greet, 1000, 'Weli', 'Sagita');
+console.log(obj1);
