@@ -1,6 +1,15 @@
+function sum(){
+    let c = 0;
+    function increaseSum(){
+        return c = c + 1;
+    }
+    return increaseSum;
+}
 
+const v = sum()
+let c = 5
 
-let add = (a, b) => a+b;
-let result = add(2, 3);
+console.log(v());
+console.log(v());
 
-console.log(result);
+console.log(c);
