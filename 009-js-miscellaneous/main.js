@@ -1,11 +1,35 @@
-myVariable = 9;
-console.log(myVariable);
+function displayElements(arr) {
 
-function hello(){
+    // to update the iteration
+    let n = 0;
 
-     // applicable only for this function
-    'use strict';
-    string = 'hello';// throws an error
+    return {
+
+        // implementing the next() function
+        next() {
+
+            if(n < arr.length) {
+                return {
+                    value: arr[n++],
+                    done: false
+                }
+            }
+
+            return {
+                value: undefined,
+                done: true
+            }
+        }
+    }
 }
 
-hello();
+const arr3 = ['h', 'e', 'l', 'l', 'o'];
+
+const arrIterator3 = displayElements(arr3);
+
+console.log(arrIterator3.next());
+console.log(arrIterator3.next());
+console.log(arrIterator3.next());
+console.log(arrIterator3.next());
+console.log(arrIterator3.next());
+console.log(arrIterator3.next());
