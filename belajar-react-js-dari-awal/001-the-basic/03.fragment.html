@@ -15,23 +15,23 @@
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script>
-        //JavaScript
-        /*
-        const root = document.querySelector('#root');
+       
+        const root = document.querySelector('#root');//Access root
 
-        const element = document.createElement('h1');
-        element.textContent = 'Hello from JS!';
-        element.className = 'heading-1';
-
-        root.appendChild(element);*/
-
-
-        //React
-        const element = React.createElement('h1',{
-            children: 'Hello from React!',
-            className: 'heading-1',
+        //Create element
+        const p1 = React.createElement('p',{
+            children: 'Hello Paragraph 1',
         });
 
+        const p2 = React.createElement('p',{
+            children: 'Hello Paragraph 2',
+        });
+
+        const element = React.createElement(React.Fragment, {
+            children: [p1, p2]
+        });
+
+        //Render
         ReactDOM.render(element, root);
     </script>
     
